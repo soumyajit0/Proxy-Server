@@ -98,6 +98,7 @@ sendErrorMessage (int socket, int status_code)
     }
   return 1;
 }
+
 int
 connectRemoteServer (char *host_addr, int port_num)
 {
@@ -133,6 +134,7 @@ connectRemoteServer (char *host_addr, int port_num)
   // free(host_addr);
   return remoteSocket;
 }
+
 int
 handle_request (int clientSocket, ParsedRequest *request, char *tempReq)
 {
@@ -199,6 +201,7 @@ handle_request (int clientSocket, ParsedRequest *request, char *tempReq)
   close (remoteSocketID);
   return 0;
 }
+
 int
 checkHTTPversion (char *msg)
 {
@@ -215,6 +218,7 @@ checkHTTPversion (char *msg)
     version = -1;
   return version;
 }
+
 void *
 thread_fn (void *socketNew)
 {
@@ -328,6 +332,7 @@ thread_fn (void *socketNew)
   free (tempReq);
   return NULL;
 }
+
 int
 main (int argc, char *argv[])
 {
@@ -410,6 +415,7 @@ main (int argc, char *argv[])
   close (proxy_socketId);	// Close socket
   return 0;
 }
+
 cache_element *
 find (char *url)
 {
@@ -444,6 +450,7 @@ find (char *url)
   printf ("Remove Cache Lock Unlocked %d\n", temp_lock_val);
   return site;
 }
+
 void
 remove_cache_element ()
 {
@@ -481,6 +488,7 @@ remove_cache_element ()
   temp_lock_val = pthread_mutex_unlock (&lock);
   printf ("Remove Cache Lock Unlocked %d\n", temp_lock_val);
 }
+
 int
 add_cache_element (char *data, int size, char *url)
 {
