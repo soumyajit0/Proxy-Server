@@ -61,7 +61,7 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href 
 
 ```bash
 $ git clone https://github.com/soumyajit0/Proxy-Server.git
-$ cd MultiThreadedProxyServerClient
+$ cd Proxy-Server
 $ make all
 $ ./proxy <port no.>
 ```
