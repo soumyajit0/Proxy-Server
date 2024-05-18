@@ -1,6 +1,7 @@
 <h1>Multi Threaded Proxy Server with and without Cache</h1>
 
-This project is implemented using `C` and Parsing of HTTP referred from <a href="https://github.com/vaibhavnaagar/proxy-server">Proxy Server</a>
+This project is implemented using `C` and Parsing of HTTP referred from <a href = "https://github.com/vaibhavnaagar/proxy-server"> Proxy Server </a>
+
 
 ## Index
 
@@ -11,7 +12,7 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href=
 
 ## Project Theory
 
-[[Back to top]](#index)
+[[Back to top]](https://github.com/soumyajit0/Proxy-Server#index)
 
 ##### Introduction
 
@@ -20,8 +21,9 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href=
 
 ##### How did we implement Multi-threading?
 - Used Semaphore instead of Condition Variables and pthread_join() and pthread_exit() function. 
-- pthread_join() requires us to pass the thread id of the thread to wait for. 
+- pthread_join() requires us to pass the thread id of the the thread to wait for. 
 - Semaphore’s sem_wait() and sem_post() doesn’t need any parameter. So it is a better option. 
+
 
 ##### Motivation/Need of Project
 - To Understand → 
@@ -50,8 +52,10 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href=
 - We can decide which type of websites should be allowed by extending the code.
 - We can implement requests like POST with this code.
 
+
 # Note :-
 - Code is well commented. For any doubt you can refer to the comments.
+
 
 ## How to Run
 
@@ -60,3 +64,22 @@ $ git clone https://github.com/soumyajit0/Proxy-Server.git
 $ cd Proxy-Server
 $ make all
 $ ./proxy <port no.>
+```
+`Open http://localhost:port/https://www.cs.princeton.edu/`
+
+# Note:
+- This code can only be run in Linux Machine. Please disable your browser cache.
+- To run the proxy without cache Change the name of the file (`proxyServerWithCache.c to proxyServerWithoutCache.c`) MakeFile.
+
+## Demo
+![](https://github.com/soumyajit0/Proxy-Server/blob/main/imgs/Cache.png)
+- When website is opened for the first time (`url not found`) then cache will be miss.
+- Then if you again open that website again then `Data is retrieved from the cache` will be printed.
+
+## Contributing
+
+[[Back to top]](https://github.com/soumyajit0/Proxy-Server#index)
+
+Feel free to add some useful. You can see `How this code can be extended`. Use ideas from there and feel free to fork and CHANGE. 
+
+#### Pull requests are highly appreciated.
